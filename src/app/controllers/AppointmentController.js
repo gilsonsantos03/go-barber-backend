@@ -55,7 +55,7 @@ class AppoinmentController {
 
     if (!isProvider) {
       return res
-        .status(400)
+        .status(401)
         .json({ error: 'You can only create appointments with providers' });
     }
 
