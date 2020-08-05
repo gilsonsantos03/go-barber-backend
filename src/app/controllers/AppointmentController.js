@@ -13,7 +13,7 @@ class AppoinmentController {
   async index(req, res) {
     const { page = 1 } = req.query;
     // o canceled_at null vai mostrar os que ainda não fora cancelados
-    const appointnments = await Appointment.findAll({
+    const appointnments = await Appointment.finddAll({
       where: { user_id: req.userId, canceled_at: null },
       order: ['date'],
       limit: 20,
